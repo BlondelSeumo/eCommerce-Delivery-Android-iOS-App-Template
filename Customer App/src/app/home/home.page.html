@@ -1,0 +1,354 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                <div class="form">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+
+                            <ion-select mode="ios" interface="popover" [(ngModel)]="location">
+                                <ion-select-option value="home">{{'home' | translate}}</ion-select-option>
+                                <ion-select-option value="office">{{'office' | translate}}</ion-select-option>
+                                <ion-select-option value="other">{{'other' | translate}}</ion-select-option>
+                            </ion-select>
+
+                            <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                        </div>
+                    </ion-item> 
+                </div>
+
+                <span class="end cart_icon" (click)="cart()">
+                    <img src="assets/images/ic_cart_blk.png" class="light-theme-icon">
+                    <img src="assets/images/ic_cart_wt.png" class="dark-theme-icon"> 
+                    <ion-badge>2</ion-badge>
+                </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="search_box animate__animated animate__zoomIn">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_item_or_store' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content>
+    <div class="item-container">
+        <h2><strong>{{'got_delivered' | translate}}</strong> {{'everything_you_need' | translate}}</h2>
+
+        <ion-row>
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Vegetables_Fruitsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Vegetables <br>& Fruits
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Food_Mealsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Food <br>& Meals
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>    
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Meat_Fishact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Meat <br>& Fish
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pharma_Medicinesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pharma <br> Medicines
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>  
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pet_Suppliesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pet <br> Supplies
+                        </h3>
+                    </div>
+                </div>
+            </ion-col> 
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="custom_delivery()">
+                    <div class="item_img">
+                        <img src="assets/images/Custom_Deliveryact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Custom <br> Delivery
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>
+            
+              <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Vegetables_Fruitsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Vegetables <br>& Fruits
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Food_Mealsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Food <br>& Meals
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>    
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Meat_Fishact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Meat <br>& Fish
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pharma_Medicinesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pharma <br> Medicines
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>  
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pet_Suppliesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pet <br> Supplies
+                        </h3>
+                    </div>
+                </div>
+            </ion-col> 
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="custom_delivery()">
+                    <div class="item_img">
+                        <img src="assets/images/Custom_Deliveryact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Custom <br> Delivery
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>
+            
+              <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Vegetables_Fruitsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Vegetables <br>& Fruits
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Food_Mealsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Food <br>& Meals
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>    
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Meat_Fishact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Meat <br>& Fish
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pharma_Medicinesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pharma <br> Medicines
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>  
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pet_Suppliesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pet <br> Supplies
+                        </h3>
+                    </div>
+                </div>
+            </ion-col> 
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="custom_delivery()">
+                    <div class="item_img">
+                        <img src="assets/images/Custom_Deliveryact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Custom <br> Delivery
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>
+            
+              <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Vegetables_Fruitsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Vegetables <br>& Fruits
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Food_Mealsact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Food <br>& Meals
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>    
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Meat_Fishact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Meat <br>& Fish
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>   
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pharma_Medicinesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pharma <br> Medicines
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>  
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="stores()">
+                    <div class="item_img">
+                        <img src="assets/images/Pet_Suppliesact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Pet <br> Supplies
+                        </h3>
+                    </div>
+                </div>
+            </ion-col> 
+            
+            <ion-col class="animate__animated animate__zoomIn" size="6">
+                <div class="item_box" (click)="custom_delivery()">
+                    <div class="item_img">
+                        <img src="assets/images/Custom_Deliveryact.png">
+                    </div>
+                    <div class="item_text ion-text-center">
+                        <h3>
+                            Custom <br> Delivery
+                        </h3>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

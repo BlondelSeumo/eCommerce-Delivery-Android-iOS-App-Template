@@ -1,0 +1,44 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title>variation-selection</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content fullscreen (click)="dismiss()">
+
+</ion-content>
+<ion-footer class="ion-no-border">
+    <ion-list lines="none">
+        <div class="list_header d-flex">
+            <div class="text_box">
+                <h2>Fresh Red Onions</h2>
+                <h3>Vegetables</h3>
+            </div>
+            <h6 class="end" (click)="dismiss()">{{'add' | translate}}</h6>
+        </div>
+        <ion-radio-group>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <ion-radio slot="start" value="1"></ion-radio>
+                    <h2 class="d-flex">1 kg <span class="end">$ 3.00</span></h2>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <ion-radio slot="start" value="2"></ion-radio>
+                    <h2 class="d-flex">500 kg <span class="end">$ 2.00</span></h2>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <ion-radio slot="start" value="3"></ion-radio>
+                    <h2 class="d-flex">250 kg <span class="end">$ 1.50</span></h2>
+                </div>
+            </ion-item>
+        </ion-radio-group>
+    </ion-list>
+</ion-footer>

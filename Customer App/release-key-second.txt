@@ -1,0 +1,2 @@
+alias: release-key-second
+password: release-key-second

@@ -1,0 +1,52 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-menu-button></ion-menu-button>
+		</ion-buttons>
+		<ion-title [ngClass]="fabAction ? 'active' : ''">
+			<div class="title_inner d-flex">
+				<span class="offline">{{'you_are_offline' | translate}}</span>
+				<span class="online">{{'you_are_online' | translate}}</span>
+
+				<div class="online_offline_button online end" (click)="toggleFab()">
+					{{'go_online' | translate}}
+				</div>
+
+				<div class="online_offline_button offline end" (click)="toggleFab()">
+					{{'go_offline' | translate}}
+				</div>
+			</div>
+		</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+	<div class="map center_img">
+		<img src="assets/images/map.png" class="crop_img">
+
+		<div class="delivery_location" style="top: 31%; right: 49%; transform: rotate(-17deg);">
+			<img src="assets/images/deliveryman.png">
+		</div>
+	</div>
+</ion-content>
+
+<ion-footer class="ion-no-border" [ngClass]="fabAction ? 'active' : ''">
+	<div class="all_delivery animate__animated animate__fadeInUp">
+		<ion-row class="ion-text-center">
+			<ion-col size="4">
+				<h2>64</h2>
+				<h3>{{'orders' | translate}}</h3>
+			</ion-col>
+			<ion-col size="4">
+				<h2>68 km</h2>
+				<h3>{{'ride' | translate}}</h3>
+			</ion-col>
+			<ion-col size="4">
+				<h2>$302.50</h2>
+				<h3>{{'earnings' | translate}}</h3>
+			</ion-col>
+		</ion-row>
+	</div>
+
+	<ion-button size="large" expand="full" class="btn animate__animated animate__fadeInUp" (click)="new_delivery()">{{'new_delivery' | translate}}</ion-button>
+</ion-footer>

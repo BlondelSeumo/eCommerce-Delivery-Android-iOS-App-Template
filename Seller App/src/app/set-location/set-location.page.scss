@@ -1,0 +1,114 @@
+ion-header {
+    background: var(--white);
+    padding-bottom: 13px;
+
+    .search_box {
+        width: calc(100% - 42px);
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        height: 59px;
+        position: relative;
+        background: var(--bg-color);
+        border-radius: 50px;
+        padding: 0 16px;
+        --animate-duration: .25s !important;
+
+        ion-icon {
+            color: var(--text-black);
+            font-size: 1.35rem;
+            min-width: 30px;
+            height: 30px;
+            line-height: 30px;
+            z-index: 99;
+            padding: 0 2px;
+        }
+
+        ion-searchbar {
+            --background: var(--transparent) !important;
+            --color: var(--text-black);
+            --placeholder-opacity: 1;
+            --placeholder-color: var(--text-light);
+            --placeholder-font-weight: 500 !important;
+            --box-shadow: none !important;
+        }
+    }
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map_pin {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: block;
+        background: url(../../assets/images/map_pin.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+ion-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    --animate-duration: .4s !important;
+
+    .current_location {
+        display: block;
+        margin-right: 20px;
+        margin-left: auto;
+        margin-bottom: 20px;
+        width: 44px;
+        height: 44px;
+        background: var(--white);
+        border-radius: 50px;
+        text-align: center;
+
+        ion-icon {
+            line-height: 44px;
+            height: 44px;
+            font-size: 1.43rem;
+        }
+    }
+
+    .address {
+        background: var(--bg-color);
+        padding: 15px 20px;
+        width: 100%;
+
+        h2 {
+            margin: 0;
+            font-size: 0.75rem;
+            color: var(--text-black);
+
+            span {
+                &.map_pin {
+                    min-width: 25px;
+                    height: 25px;
+                    display: block;
+                    background: url(../../assets/images/map_pin.png);
+                    background-size: contain;
+                    background-position: left;
+                    background-repeat: no-repeat;
+                    margin-right: 4px;
+                }
+            }
+        }
+    }
+}

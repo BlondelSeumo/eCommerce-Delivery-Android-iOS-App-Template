@@ -1,0 +1,45 @@
+.banner {
+    background: var(--bg-color);
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        display: block;
+        width: 105px;
+        margin: auto;
+
+        img {
+            &.dark_theme_logo {
+                display: none;
+            }
+        }
+    }
+}
+
+.form {
+    padding-top: 30px;
+    padding-bottom: 23px;
+
+    h2 {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1.23rem;
+        font-weight: 600;
+        padding-bottom: 5px;
+
+    }
+
+    p {
+        margin: 0;
+        font-size: .94rem;
+        line-height: 24px;
+        letter-spacing: .4px;
+        padding-bottom: 35px;
+
+    }
+}
+
+ion-footer {
+    --animate-duration: .4s !important;
+}

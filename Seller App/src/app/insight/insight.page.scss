@@ -1,0 +1,412 @@
+ion-header {
+    background: var(--white);
+
+    ion-toolbar ion-title {
+
+        .title_inner {
+
+            span {
+                &.cart_icon {
+                    position: relative;
+                    min-width: 27px;
+
+                    ion-badge {
+                        background: var(--red_color);
+                        --background: var(--transparent);
+                        --color: var(--white);
+                        --padding-bottom: 0;
+                        --padding-end: 0;
+                        --padding-start: 0;
+                        --padding-top: 0;
+                        border-radius: 50%;
+                        width: 17px;
+                        height: 17px;
+                        line-height: 17px;
+                        display: block;
+                        font-size: 0.8rem !important;
+                        position: absolute;
+                        top: 17px;
+                        right: 0;
+                        font-weight: 500;
+                    }
+
+
+                    img {
+                        width: 26px;
+                        position: relative;
+                        top: 10px;
+                        font-size: 1.5rem;
+                        margin-right: 7px;
+                    }
+                }
+            }
+
+            .form {
+                width: fit-content;
+                margin: 0;
+                padding: 0;
+
+                ion-item {
+                    margin: 0;
+                    width: fit-content;
+
+                    .item_inner {
+                        ion-icon {
+                            margin: 0;
+                            font-size: 1.4rem;
+                            min-width: 26px;
+                            height: 26px;
+                            line-height: normal;
+                            padding: 0 1px;
+
+                            &.zmdi-chevron-down {
+                                min-width: 19px;
+                                position: relative;
+                                top: 3px;
+                            }
+                        }
+
+                        &.d-flex {
+                            align-items: center !important;
+                        }
+                    }
+
+                    ion-select {
+                        width: fit-content;
+                        max-width: fit-content;
+                        font-size: 1rem !important;
+                        font-weight: 500 !important;
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                        color: var(--primary) !important;
+
+                        &::part(icon) {
+                            display: none !important;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+ion-card {
+    border-radius: 0;
+    background: var(--white);
+    box-shadow: none;
+    margin: 0;
+    width: 100%;
+    margin-top: 8px;
+
+
+    &.tab {
+        ion-row {
+            ion-col {
+                position: relative;
+                padding: 18px 5px;
+                overflow: hidden;
+
+                h2 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    padding-bottom: 5px;
+                }
+
+                p {
+                    color: var(--text-dark);
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: .86rem;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 0;
+                    height: 3px;
+                    background: var(--primary);
+                    transition: all .5s;
+                    margin: auto;
+                }
+
+                &.active {
+                    &::after {
+                        width: 45px;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .card_containt {
+        width: 100%;
+        padding: 20px 10px;
+
+        h1 {
+            margin: 0;
+            color: var(--text-black);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            padding: 0 10px 15px 10px;
+        }
+
+        h3 {
+            margin: 0;
+            color: var(--primary);
+            font-size: .9rem;
+            text-transform: uppercase;
+            padding-top: 14px;
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+    }
+
+    .graph_container {
+        position: relative;
+        overflow: hidden;
+        min-height: 220px;
+        padding-bottom: 30px;
+
+        .text_container {
+            position: absolute;
+            bottom: -22px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            p {
+                position: relative;
+                width: 100%;
+                margin: 0;
+                padding-bottom: 18px;
+                color: var(--text-black);
+
+                span {
+                    display: block;
+                    color: var(--text-black);
+                    width: fit-content;
+                    font-size: 0.83rem;
+                    font-weight: 600;
+                    min-width: 40px;
+                    text-align: right;
+                    z-index: 999;
+                    position: relative;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -4px;
+                    bottom: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: calc(100% - 0px);
+                    height: 1px;
+                    background: #ccc;
+                    opacity: .7;
+                }
+            }
+        }
+
+        .graph {
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            width: calc(100% - 40px);
+            height: calc(100% - 16px);
+            display: flex;
+            align-items: flex-end;
+            z-index: 9999;
+            overflow-x: scroll;
+            white-space: nowrap;
+            padding-bottom: 8px;
+
+            .bar_box {
+                display: inline-block;
+                position: relative;
+                height: calc(100% - 11px);
+                margin: 0 5px;
+                width: 30px;
+                min-width: 30px;
+                overflow: visible !important;
+                -webkit-animation: bar_box .9s 0.1s;
+                -moz-animation: bar_box .9s 0.1s;
+                animation: bar_box .9s 0.1s;
+
+                h4 {
+                    color: var(--text-black);
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    text-align: center;
+                    margin: 0;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                }
+
+                .bar {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    z-index: 999;
+                    width: 100%;
+                    max-height: calc(100% - 1px);
+                    transition: all .3s;
+                    -webkit-animation: bar .9s 0.1s;
+                    -moz-animation: bar .9s 0.1s;
+                    animation: bar .9s 0.1s;
+
+
+                    h5 {
+                        position: absolute;
+                        top: -3px;
+                        right: 0;
+                        left: 0;
+                        z-index: 99;
+                        color: var(--text-dark-primary);
+                        font-size: .55rem;
+                        font-weight: 500;
+                        text-align: center;
+                        width: fit-content;
+                        margin: 0 auto;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 11px;
+                        left: 0;
+                        right: 0;
+                        width: 100%;
+                        height: calc(100% - 25px);
+                        margin: auto;
+                        background: linear-gradient(to bottom, rgba(122, 200, 30, 1) 35%, rgba(122, 200, 30, 1) 36%, rgba(255, 255, 255, 0.89) 100%);
+
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 15px;
+
+                }
+
+                &:last-child {
+                    margin-right: 15px;
+                }
+            }
+
+        }
+    }
+}
+
+ion-list {
+    margin: 0;
+    background: none;
+    padding: 20px 20px 0 20px;
+    background: var(--white);
+    margin-top: 8px;
+
+    h2 {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1rem;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+
+        span {
+            display: block;
+            color: var(--text-dark);
+            margin: 0;
+            font-weight: 500;
+            font-size: 0.86rem;
+            letter-spacing: 0;
+            text-transform: none;
+            padding-top: 2px;
+
+        }
+    }
+
+    ion-item {
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        background: var(--white);
+
+        .item_inner {
+
+            .img_box {
+                min-width: 75px;
+                max-width: 75px;
+                height: 75px;
+                margin-right: 15px;
+                display: flex;
+                align-items: center;
+
+                img {
+                    display: block;
+                    margin: auto;
+                    width: 65px;
+                }
+            }
+
+            .text_box {
+                width: 100%;
+
+                h3 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: 0.94rem;
+                    font-weight: 500;
+                    margin-bottom: 7px;
+                    letter-spacing: 0.3px;
+                }
+
+                h4 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: .9rem;
+                    font-weight: 500;
+                    letter-spacing: .3px;
+                }
+            }
+        }
+    }
+}
+
+/* Bar Graph Vertical Animations */
+@-webkit-keyframes bar_box {
+    0% {
+        height: 0px;
+    }
+
+    100% {
+        height: calc(100% - 11px);
+    }
+}
+
+@-webkit-keyframes bar {
+    0% {
+        opacity: .1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

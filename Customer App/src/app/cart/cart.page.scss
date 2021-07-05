@@ -1,0 +1,227 @@
+ion-header {
+    .shop_name {
+        background: var(--bg-color);
+        padding: 20px;
+
+        h2 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: .9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+    }
+}
+
+ion-list {
+    margin: 0;
+    background: none;
+    padding: 0;
+
+    ion-item {
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        background: var(--white);
+        padding: 13px 20px;
+        margin-bottom: 8px;
+
+        .item_inner {
+            width: 100%;
+        }
+    }
+
+    .item_list {
+        margin-bottom: 8px;
+        --animate-duration: .2s;
+
+        ion-item {
+            margin-bottom: 1px;
+
+            .item_inner {
+
+                .text_box {
+                    width: 100%;
+
+                    h3 {
+                        margin: 0;
+                        color: var(--text-black);
+                        font-size: 0.94rem;
+                        font-weight: 500;
+                        letter-spacing: 0.3px;
+                    }
+
+
+                    .buttons {
+                        padding-top: 13px;
+
+                        h5 {
+                            margin: 0;
+                            background: var(--bg-color);
+                            border-radius: 50px;
+                            font-weight: 400;
+                            font-size: .95rem;
+                            padding: 7px 19px;
+                            display: flex;
+                            align-items: center;
+                            min-width: fit-content;
+
+                            ion-icon {
+                                color: var(--primary);
+                                font-size: 1.15rem;
+                                padding: 0 2px;
+                                min-width: 21px;
+                            }
+                        }
+
+                        p {
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            border: 1px solid var(--primary);
+                            font-size: .87rem;
+                            font-weight: 500;
+                            border-radius: 50px;
+                            text-align: center;
+                            padding: 1px;
+
+                            span {
+                                display: block;
+                                min-width: 29px;
+                                color: var(--primary);
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+                            strong {
+                                display: block;
+                                min-width: 23px;
+                                font-size: 1rem;
+                            }
+                        }
+
+                        h4 {
+                            margin: 0;
+                            color: var(--text-black);
+                            font-size: .9rem;
+                            font-weight: 500;
+                            letter-spacing: .3px;
+                            min-width: 68px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .form {
+        padding: 0;
+        --animate-duration: .25s;
+
+        ion-item {
+            .item_inner.d-flex {
+                align-items: center !important;
+            }
+
+            .icon_box {
+                position: relative;
+                top: 2px;
+            }
+
+            .input_box {
+                border: none !important;
+                padding: 0 !important;
+
+                ion-input {
+                    font-size: 0.9rem !important;
+                    --padding-top: 6px !important;
+                    --padding-bottom: 6px !important;
+                }
+            }
+        }
+    }
+
+    .payment_info {
+        --animate-duration: .3s;
+
+        h1 {
+            padding: 13px 20px;
+            margin: 0;
+            color: var(--text-dark);
+            background: var(--white);
+            font-size: .9rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        ion-item {
+            margin-bottom: 1px;
+            --min-height: unset;
+
+            .item_inner {
+                h3 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: 0.95rem;
+                    font-weight: 400;
+                    letter-spacing: 0.3px;
+                }
+
+                h2 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    padding: 0;
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+ion-footer {
+    --animate-duration: .4s !important;
+
+    .delivery_address {
+        padding: 13px 20px;
+        background: var(--white);
+
+        h2 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding-bottom: 6px;
+
+            ion-icon {
+                color: var(--text-light);
+                min-width: 19px;
+                font-size: 1rem;
+
+            }
+
+            span {
+                color: var(--primary);
+                font-weight: 500;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: var(--text-light);
+            font-size: .83rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}

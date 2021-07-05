@@ -1,0 +1,2596 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'my_orders' | translate}}</ion-title>
+    </ion-toolbar>
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment">
+        <ion-segment-button mode="ios" value="0">
+            <ion-label>{{'new_orders' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="1">
+            <ion-label>{{'past_orders' | translate}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="tab_content">
+        <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="pending animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'pending' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="accepted animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'accepted' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+
+
+
+            <ion-slide>
+                <ion-list lines="none">
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Daniel Hemilton
+                                        <span class="end">
+                                            $ 22.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Lisa davls
+                                        <span class="end">
+                                            $ 44.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2444560</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Samantha Smith
+                                        <span class="end">
+                                            $ 20.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Cash on Delivery</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144142</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Emilli Williamson
+                                        <span class="end">
+                                            $ 12.50
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">PayPal</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144158</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 2 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="delivered animate__animated animate__fadeInUp" (click)="order_info()">
+                        <div class="item_inner">
+                            <div class="item_info d-flex">
+                                <div class="itme_img">
+                                    <img src="assets/images/Vegetables_Fruitsact.png">
+                                </div>
+                                <div class="item_details">
+                                    <h3 class="d-flex">
+                                        Linda Taylor
+                                        <span class="end">
+                                            $ 35.00
+                                        </span>
+                                    </h3>
+                                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">Credit Card</span></h4>
+                                </div>
+                            </div>
+                            <div class="order_info d-flex">
+                                <div class="itme_img">
+                                </div>
+                                <ion-row>
+                                    <ion-col size="6">
+                                        <h5>{{'order_num' | translate}} 2144190</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5> 4 {{'items' | translate}}</h5>
+                                    </ion-col>
+                                    <ion-col size="3">
+                                        <h5 class="ion-text-end order_status"> {{'delivered' | translate}}</h5>
+                                    </ion-col>
+                                </ion-row>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>

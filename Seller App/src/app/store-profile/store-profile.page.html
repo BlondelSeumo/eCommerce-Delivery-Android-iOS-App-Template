@@ -1,0 +1,121 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'edit_product' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="feature_image animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <h2> {{'feature_image' | translate}}</h2>
+                <div class="d-flex" style="align-items: flex-start;">
+                    <div class="img_box center_img">
+                        <img src="assets/images/store1.png" class="crop_img">
+                    </div>
+                    <h3 class="d-flex">
+                        <ion-icon class="zmdi zmdi-camera ion-text-start"></ion-icon>
+                        {{'upload_photo' | translate}}
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="form animate__animated animate__fadeInUp">
+            <h2>{{'store_info' | translate}}</h2>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"store_name" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="" value="Silver Leaf Vegetables"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"store_category" | translate}}</ion-label>
+                        <div class="d-flex" style="align-items: flex-end;">
+                            <ion-select [(ngModel)]="store_category">
+                                <ion-select-option value="1">Vegetables & Fruits / Vegetables</ion-select-option>
+                                <ion-select-option value="2">Fruits</ion-select-option>
+                                <ion-select-option value="3">Vegetables</ion-select-option>
+                                <ion-select-option value="4">Dary</ion-select-option>
+                                <ion-select-option value="5">Grocery </ion-select-option>
+                            </ion-select>
+                            
+                            <ion-icon class="zmdi zmdi-chevron-down ion-text-end end"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"phone_number" | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="" value="+1 987 654 3210"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"email_address" | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="" value="storename@email"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <ion-item  lines="none" class="address animate__animated animate__fadeInUp" (click)="set_location()">
+            <div class="item_inner">
+                <h2>{{'address' | translate}}</h2>
+                <p class="d-flex">
+                    <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                    1124, Veggy Garden, Union Market, United States
+                </p>
+            </div>
+        </ion-item>
+
+        <div class="form store_timings animate__animated animate__fadeInUp">
+            <h2>{{'store_timings' | translate}}</h2>
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <div class="input_box">
+                                <ion-label mode="md" position="stacked">{{"opening_time" | translate}}</ion-label>
+                                <ion-datetime mode="ios" displayFormat="h:mm a" value="11:30"></ion-datetime>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <div class="input_box">
+                                <ion-label mode="md" position="stacked">{{"closing_time" | translate}}</ion-label>
+                                <ion-datetime mode="ios" displayFormat="h:mm a" value="09:00"></ion-datetime>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-button size="large" expand="full" class="btn">{{'update_info' | translate}}</ion-button>
+</ion-footer>

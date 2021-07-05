@@ -1,0 +1,172 @@
+<ion-header [ngClass]="viewType == 'active' ? 'active':''">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <ion-icon class="zmdi zmdi-chevron-down" (click)="setViewType(null)" (click)="setViewTypeB(null)"></ion-icon>
+        </ion-title>
+    </ion-toolbar>
+    <ion-item lines="none">
+        <div class="item_inner">
+            <div class="item_info d-flex">
+                <div class="itme_img">
+                    <img src="assets/images/Vegetables_Fruitsact.png">
+                </div>
+                <div class="d-flex">
+                    <div class="item_details">
+                        <h3 class="d-flex animate__animated animate__fadeInUp">
+                            Samantha Smith
+                        </h3>
+                        <h4 class="d-flex animate__animated animate__fadeInUp">20 Jun, 11:35 am</h4>
+                    </div>
+                    <div class="icon_box end">
+                        <ion-icon class="zmdi zmdi-comment-alt-text ion-text-start" (click)="chat_customer()"></ion-icon>
+                        <ion-icon class="zmdi zmdi-phone ion-text-end"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-item>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <div class="item_list animate__animated animate__fadeInUp">
+            <h1>{{'items' | translate}}</h1>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="text_box">
+                        <h3>Fresh Red Onions</h3>
+                        <div class="buttons d-flex">
+                            <h5>1 kg x 1</h5>
+                            <h4 class="ion-text-end end">$ 3.00</h4>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="text_box">
+                        <h3>Fresh Cauliflower</h3>
+                        <div class="buttons d-flex">
+                            <h5>1 kg x 1</h5>
+                            <h4 class="ion-text-end end">$ 4.50</h4>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="text_box">
+                        <h3>Fresh Red Tomattoes</h3>
+                        <div class="buttons d-flex">
+                            <h5>1 kg x 1</h5>
+                            <h4 class="ion-text-end end">$ 2.50</h4>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="form animate__animated animate__fadeInUp">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start"><img src="assets/images/ic_instruction.png"></div>
+                    <div class="input_box">
+                        <ion-input mode="md" type="name" readonly="boolean" value="Keep tomatoes in saperate bag please."></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="payment_info animate__animated animate__fadeInUp">
+            <h1>{{'payment_info' | translate}}</h1>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h3 class="d-flex">{{'sub_total' | translate}} <span class="end">$ 10.00</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h3 class="d-flex">{{'service_fee' | translate}} <span class="end">$ 1.50</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">Cash on Delivery <span class="end">$ 11.50</span></h2>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+
+    <ion-list class="animate__animated animate__fadeInUp" lines="none" [ngClass]="viewType == 'active' ? 'track_delivery active':'track_delivery'">
+        <ion-item class="profile_info" (click)="setViewType('active')">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/img_profile.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>George Anderson</h2>
+                    <h3>{{'delivery_partner' | translate}} {{'assigned' | translate}}</h3>
+                </div>
+                <div class="icon_box end">
+                    <div class="icon_box_inner">
+                        <ion-icon class="zmdi zmdi-navigation ion-text-end"></ion-icon>
+                    </div>
+
+                    <div [ngClass]="viewTypeB == 'active' ? 'icon_box_inner active':'icon_box_inner'">
+                        <ion-icon class="zmdi zmdi-comment-alt-text ion-text-start" (click)="setViewTypeB('active')"></ion-icon>
+                        <ion-icon class="zmdi zmdi-close ion-text-start" (click)="setViewTypeB(null)"></ion-icon>
+
+                        <ion-icon class="zmdi zmdi-phone ion-text-end"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="map center_img">
+            <img src="assets/images/map.png" class="crop_img">
+            <div class="delivery_location" style="top: 4%; right: 77%; transform: rotate(-164deg);">
+                <img src="assets/images/deliveryman.png">
+            </div>
+            <ion-icon class="zmdi zmdi-pin ion-text-center" style="top: 20%; right: 79%;"></ion-icon>
+            <ion-icon class="zmdi zmdi-navigation ion-text-center" style="top: 36%; right: 35%;"></ion-icon>
+        </div>
+    </ion-list>
+
+
+    <div [ngClass]="viewTypeB == 'active' ? 'chat_option active':'chat_option'">
+        <div class="chat_container d-flex">
+            <div class="chat_box d-flex send">
+                <div class="chat">
+                    <h2>Hey there? <br> How much time?</h2>
+                    <p>11:58 am</p>
+                </div>
+            </div>
+
+            <div class="chat_box d-flex  received">
+                <div class="chat">
+                    <h2>On my way ma'm <br>Will reach in 10 mins.</h2>
+                    <p>11:59 am</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="form">
+            <ion-list lines="none d-flex">
+                <ion-item lines="none">
+                    <ion-textarea rows="1"  auto-grow="true" type="text" placeholder="{{'type_your_meassage' | translate}}"></ion-textarea>
+                </ion-item>
+                <div class="send_btn end">
+                    <ion-icon class="zmdi zmdi-mail-send"></ion-icon>
+                </div>
+            </ion-list>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-button size="large" expand="full" class="btn">{{'ready_to_deliver' | translate}}</ion-button>
+</ion-footer>

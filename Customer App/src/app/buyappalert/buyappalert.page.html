@@ -1,0 +1,26 @@
+<ion-content>
+    <div class="clear_button">
+        <ion-icon name="close" (click)="dismiss()"></ion-icon>
+    </div>
+    <div class="container no_backend">
+        <h2>Buy this <br> Template Now</h2>
+        <p>IONIC template only, No Backend.</p>
+        <div class="button">
+            <div class="icon_box">
+                <img src="https://opuslabs.nyc3.digitaloceanspaces.com/AAFixItems/Other/ic_codecanyon.png">
+            </div>
+            <h3 (click)="buyAppAction()">Get it on <strong>Codecanoyon</strong></h3>
+        </div>
+    </div>
+
+    <div class="container complete_backend">
+        <h2>Buy this App with <br>Complete Backend </h2>
+        <p>Full App solution with complete Backend.</p>
+        <div class="button" (click)="navWhatsapp()">
+            <div class="icon_box">
+                <img src="https://opuslabs.nyc3.digitaloceanspaces.com/AAFixItems/Other/ic_whatsapp.png">
+            </div>
+            <h3>Message on <strong>WhatsApp</strong></h3>
+        </div>
+    </div>
+</ion-content>

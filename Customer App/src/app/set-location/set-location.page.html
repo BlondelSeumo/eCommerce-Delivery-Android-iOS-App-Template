@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'set_delivery_location' | translate}}
+        </ion-title>
+    </ion-toolbar>
+    <div class="search_box animate__animated animate__slideInUp">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_lcation' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="map" (click)="toggleFab()">
+        <img src="assets/images/map.png">
+        <div class="map_pin animate__animated animate__zoomIn" style="top: 43%; right: 50%;"></div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp" [ngClass]="fabAction ? 'active' : ''">
+    <div class="footer_content">
+        <div class="current_location">
+            <ion-icon class="zmdi zmdi-gps-dot"></ion-icon>
+        </div>
+        <div class="address">
+            <h2 class="d-flex">
+                <span class="map_pin"></span>
+                1024, Central Residency Hemilton Park, New York, USA
+            </h2>
+        </div>
+
+        <div class="form">
+            <ion-list lines="none">
+                <ion-item lines="none">
+                    <div class="item_inner d-flex">
+                        <div class="input_box">
+                            <ion-label mode="md" position="stacked">{{"address_label" | translate}}</ion-label>
+                            <ion-input mode="md" type="name" placeholder="" value="Flat num 114, Frist Floor, Central Residency"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <div class="address_title">
+                    <h3>{{"save_address_as" | translate}}</h3>
+                    <ion-radio-group>
+                        <ion-row>
+                            <ion-col size="4">
+                                <ion-item lines="none">
+                                    <ion-radio slot="start" value="home"></ion-radio>
+                                    <ion-label class="d-flex">
+                                        <div class="img_container">
+                                            <div class="img_box">
+                                                <img src="assets/images/ic_homeblk.png">
+                                                <img src="assets/images/ic_homewt.png">
+                                            </div>
+                                            <h2>{{'home' | translate}}</h2>
+                                        </div>
+                                    </ion-label>
+                                </ion-item>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-item lines="none">
+                                    <ion-radio slot="start" value="office"></ion-radio>
+                                    <ion-label class="d-flex">
+                                        <div class="img_container">
+                                            <div class="img_box">
+                                                <img src="assets/images/ic_officeblk.png">
+                                                <img src="assets/images/ic_officewt.png">
+                                            </div>
+                                            <h2>{{'office' | translate}}</h2>
+                                        </div>
+                                    </ion-label>
+                                </ion-item>
+                            </ion-col>
+                            <ion-col size="4">
+                                <ion-item lines="none">
+                                    <ion-radio slot="start" value="other"></ion-radio>
+                                    <ion-label class="d-flex">
+                                        <div class="img_container">
+                                            <div class="img_box">
+                                                <img src="assets/images/ic_otherblk.png">
+                                                <img src="assets/images/ic_otherwt.png">
+                                            </div>
+                                            <h2>{{'other' | translate}}</h2>
+                                        </div>
+                                    </ion-label>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </ion-radio-group>
+                </div>
+            </ion-list>
+        </div>
+    </div>
+    <ion-button size="large" expand="full" class="btn btnA" (click)="tabs()">{{'continue' | translate}}</ion-button>
+    <ion-button size="large" expand="full" class="btn btnB" (click)="toggleFab()">{{'continue' | translate}}</ion-button>
+</ion-footer>

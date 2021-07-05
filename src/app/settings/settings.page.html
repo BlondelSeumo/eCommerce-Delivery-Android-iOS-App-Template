@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            {{'settings' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <div class="display_setting">
+            <h2 class="animate__animated animate__fadeInUp">{{'display_setting' | translate}}</h2>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h3 class="d-flex">{{'dark_mode' | translate}}
+                        <ion-toggle mode="ios" class="end" (ionChange)="onClick($event)"></ion-toggle>
+                    </h3>
+                    <p>{{'experience_an_excitiing_dark_mode' | translate}}</p>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="select_language">
+            <h2 class="animate__animated animate__fadeInUp">{{'select_language' | translate}}</h2>
+
+            <ion-radio-group [(ngModel)]="defaultLanguageCode">
+                <ion-item class="animate__animated animate__fadeInUp" *ngFor="let language of languages" (click)="onLanguageClick(language)">
+                    <div class="item_inner d-flex">
+                        <h3>{{language.name}}</h3>
+                        <ion-radio class="end" value="{{language.code}}"></ion-radio>
+                    </div>
+                </ion-item>
+            </ion-radio-group>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-button size="large" shape="full" class="btn" (click)="languageConfirm()"> {{'submit' | translate}} </ion-button>
+</ion-footer>

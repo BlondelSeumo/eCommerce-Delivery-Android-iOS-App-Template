@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'verification' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="form animate__animated animate__fadeInUp">
+        <ion-list lines="none">
+            <h2> {{'enter_verification_code__we_ve_sent_on_given_number' | translate}}.</h2>
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+<!--                    <div class="icon_box ion-text-start"><img src="assets/images/ic_profile.png"></div>-->
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"enter_verification_code" | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="" value="578410"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <h3 class="d-flex">0:20 &nbsp;{{'min' | translate}} <span class="end"> {{'resend' | translate}}</span></h3>
+    <ion-button size="large" expand="full" class="btn" (click)="home()">{{'continue' | translate}}</ion-button>
+</ion-footer>

@@ -1,0 +1,117 @@
+ion-header {
+    background: var(--white);
+    padding-bottom: 25px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 8px;
+        background: var(--bg-color);
+        transition: all .3s;
+        display: block;
+    }
+
+    ion-toolbar {
+        .toolbar_inner {
+            align-items: flex-start;
+
+            ion-title {
+                padding-top: 5px !important;
+
+                .title_inner {
+                    line-height: normal;
+                    width: 100%;
+                    padding-top: 8px;
+
+                    h5 {
+                        margin: 0;
+                        color: var(--primary);
+                        font-size: .73rem;
+                        font-weight: 500;
+                        letter-spacing: .3px;
+                        padding-top: 10px;
+
+                        ion-icon {
+                            min-width: 16px;
+                            padding: 0 2px;
+                            font-size: .8rem;
+                        }
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            color: var(--text-light);
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ion-list {
+    margin: 0;
+    background: none;
+    padding: 20px 20px 0 20px;
+
+
+    ion-item {
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --background: var(--transparent) !important;
+        background: var(--white);
+        margin-bottom: 30px;
+
+        .item_inner {
+            align-items: flex-start !important;
+
+
+            h2 {
+                margin: 0;
+                color: var(--text-black);
+                font-size: 1rem;
+                font-weight: 500;
+                padding-bottom: 7px;
+                letter-spacing: 0.3px;
+            }
+
+            h5 {
+                margin: 0;
+                color: var(--primary);
+                font-size: 0.9rem;
+                font-weight: 500;
+                letter-spacing: .3px;
+                padding-bottom: 7px;
+
+                ion-icon {
+                    min-width: 18px;
+                    padding: 0 2px;
+                    font-size: 1rem;
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    color: var(--text-light);
+                    font-weight: 400;
+                    font-size: .85rem;
+                }
+            }
+
+            p {
+                margin: 0;
+                color: var(--text-dark);
+                font-size: .9rem;
+                letter-spacing: .3px;
+                line-height: 22px;
+            }
+        }
+    }
+}

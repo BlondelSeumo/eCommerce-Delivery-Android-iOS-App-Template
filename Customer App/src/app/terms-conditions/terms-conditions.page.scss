@@ -1,0 +1,41 @@
+.banner {
+    background: var(--bg-color);
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        display: block;
+        width: 100px;
+        margin: auto;
+        --animate-duration: .2s !important;
+
+        img {
+            &.dark_theme_logo {
+                display: none;
+            }
+        }
+    }
+}
+
+.container {
+    padding: 5px 23px;
+
+    h2 {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1.23rem;
+        font-weight: 600;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        margin: 0;
+        font-size: .94rem;
+        line-height: 24px;
+        padding-top: 9px;
+        letter-spacing: .4px;
+
+    }
+}

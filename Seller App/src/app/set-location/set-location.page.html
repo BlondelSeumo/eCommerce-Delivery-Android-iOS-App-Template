@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'set_store_address' | translate}}
+        </ion-title>
+    </ion-toolbar>
+    <div class="search_box animate__animated animate__zoomIn">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_lcation' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="map">
+        <img src="assets/images/map.png">
+        <div class="map_pin" style="top: 43%; right: 50%;"></div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="footer_content">
+        <div class="current_location">
+            <ion-icon class="zmdi zmdi-gps-dot"></ion-icon>
+        </div>
+        <div class="address">
+            <h2 class="d-flex">
+                <span class="map_pin"></span>
+                1024, Central Residency Hemilton Park, New York, USA
+            </h2>
+        </div>
+    </div> 
+    <ion-button size="large" expand="full" class="btn">{{'continue' | translate}}</ion-button>
+</ion-footer>

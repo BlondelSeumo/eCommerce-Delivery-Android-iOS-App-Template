@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'rate_now' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+    <div class="give_rating ion-text-center">
+        <h2 class="animate__animated animate__fadeInUp">{{'how_was_your_experience' | translate}} <br>{{'with' | translate}}</h2>
+        <div class="item_details animate__animated animate__fadeInUp">
+            <div class="img_box center_img">
+                <img src="assets/images/store1.png" class="crop_img">
+            </div>
+            <h3 class="animate__animated animate__fadeInUp">Silver Leaf Vegetables</h3>
+            <h4 class="animate__animated animate__fadeInUp"> Vegetables & Fruits </h4>
+        </div>
+        <div class="icon_box animate__animated animate__fadeInUp">
+            <span [ngClass]="ratingIcon1 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon1()">
+                <ion-icon class="zmdi zmdi-star"></ion-icon>
+            </span>
+            <span [ngClass]="ratingIcon2 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon2()">
+                <ion-icon class="zmdi zmdi-star"></ion-icon>
+            </span>
+            <span [ngClass]="ratingIcon3 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon3()">
+                <ion-icon class="zmdi zmdi-star"></ion-icon>
+            </span>
+            <span [ngClass]="ratingIcon4 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon4()">
+                <ion-icon class="zmdi zmdi-star"></ion-icon>
+            </span>
+            <span [ngClass]="ratingIcon5 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon5()">
+                <ion-icon class="zmdi zmdi-star"></ion-icon>
+            </span>
+        </div>
+
+        <div class="form animate__animated animate__fadeInUp">
+            <ion-list lines="none">
+                <ion-item lines="none">
+                    <div class="item_inner d-flex">
+                        <div class="input_box">
+                            <ion-label mode="md" position="stacked">{{"add_your_review" | translate}}</ion-label>
+                            <ion-textarea rows="1" auto-grow="true" mode="md" type="name" placeholder="{{'wrire_your_experience_here' | translate}}"></ion-textarea>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-button size="large" shape="full" class="btn"> {{'submit_feedback' | translate}} </ion-button>
+</ion-footer>

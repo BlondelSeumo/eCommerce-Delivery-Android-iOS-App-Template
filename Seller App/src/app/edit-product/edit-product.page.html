@@ -1,0 +1,125 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title_inner d-flex">
+                {{'edit_product' | translate}}
+
+                <div class="toggle_box in_stock end">
+                    <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                    <ion-toggle checked mode="ios"></ion-toggle>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <ion-item class="feature_image animate__animated animate__fadeInUp">
+            <div class="item_inner">
+                <h2> {{'item_image' | translate}}</h2>
+                <div class="d-flex" style="align-items: flex-start;">
+                    <div class="img_box center_img">
+                        <!--                        <img src="assets/images/placeholder.png" class="crop_img">-->
+                        <img src="assets/images/onion.png" class="crop_img">
+                    </div>
+                    <h3 class="d-flex">
+                        <ion-icon class="zmdi zmdi-camera ion-text-start"></ion-icon>
+                        {{'upload_photo' | translate}}
+                    </h3>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="form animate__animated animate__fadeInUp">
+            <h2>{{'item_info' | translate}}</h2>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"item_title" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_item_name' | translate}}" value="Fresh Red Onion"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"item_category" | translate}}</ion-label>
+                        <div class="d-flex" style="align-items: flex-end;">
+                            <ion-select [(ngModel)]="item_category" placeholder="{{'select_item_category' | translate}}">
+                                <ion-select-option value="1">Vegetables & Fruits / Vegetables</ion-select-option>
+                                <ion-select-option value="2">Fruits</ion-select-option>
+                                <ion-select-option value="3">Vegetables</ion-select-option>
+                                <ion-select-option value="4">Dary</ion-select-option>
+                                <ion-select-option value="5">Grocery </ion-select-option>
+                            </ion-select>
+
+                            <ion-icon class="zmdi zmdi-chevron-down ion-text-end end"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="form item_price animate__animated animate__fadeInUp">
+            <h2>{{'item_price' | translate}}</h2>
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <div class="input_box">
+                                <ion-label mode="md" position="stacked">{{"item_price" | translate}}</ion-label>
+                                <ion-input mode="md" type="name" placeholder="{{'enter_price' | translate}}" value="$ 3.00"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <div class="input_box">
+                                <ion-label mode="md" position="stacked" class="ion-text-end">{{"quantity" | translate}}</ion-label>
+                                <ion-input mode="md" type="name" class="ion-text-end" placeholder="{{'enter_quantity' | translate}}" value="1 kg"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            
+            <ion-row class="animate__animated animate__fadeInUp">
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <div class="input_box">
+<!--                                <ion-label mode="md" position="stacked">{{"item_price" | translate}}</ion-label>-->
+                                <ion-input mode="md" type="name" placeholder="{{'enter_price' | translate}}" value="$ 2.00"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-col>
+
+                <ion-col size="6">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <div class="input_box">
+<!--                                <ion-label mode="md" position="stacked" class="ion-text-end">{{"quantity" | translate}}</ion-label>-->
+                                <ion-input mode="md" type="name" class="ion-text-end" placeholder="{{'enter_quantity' | translate}}" value="500 g"></ion-input>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <h6 class="ion-text-end">+ {{"add_more_option" | translate}}</h6>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-button size="large" expand="full" class="btn">{{'update_info' | translate}}</ion-button>
+</ion-footer>

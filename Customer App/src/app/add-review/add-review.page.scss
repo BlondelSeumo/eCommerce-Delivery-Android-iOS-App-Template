@@ -1,0 +1,103 @@
+ion-header ion-toolbar ion-title {
+    position: absolute !important;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    text-align: center !important;
+    padding: 0 15px !important;
+}
+
+
+.give_rating {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+
+    h2 {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1.15rem;
+        font-weight: 500;
+        padding-bottom: 20px;
+        line-height: 25px;
+    }
+
+    .item_details {
+        width: 100%;
+        padding-bottom: 40px;
+
+        .img_box {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--text-black);
+            margin-bottom: 2px;
+        }
+
+        h4 {
+            margin: 0;
+            color: var(--text-light);
+            font-size: .8rem;
+            font-weight: 400;
+        }
+    }
+
+    .icon_box {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: fit-content;
+
+        .icon_box {
+            ion-icon {
+                color: #E0E0DD;
+                font-size: 2.6rem;
+                margin: 0 5px;
+
+            }
+
+            &.active {
+                ion-icon {
+                    color: var(--primary);
+                }
+
+            }
+        }
+
+    }
+}
+
+.form {
+    padding-top: 50px;
+
+    ion-list {
+        ion-item {
+            margin-bottom: 16px;
+
+            ion-label {
+                margin-bottom: 15px !important;
+            }
+
+            ion-textarea {
+                margin-top: 0;
+                font-weight: 400 !important;
+                letter-spacing: 0;
+                font-size: 1.1rem !important;
+                --placeholder-color: var(--text-dark) !important;
+                padding-bottom: 4px !important;
+            }
+
+        }
+    }
+
+}
+
+ion-footer {
+    --animate-duration: .4s !important;
+}

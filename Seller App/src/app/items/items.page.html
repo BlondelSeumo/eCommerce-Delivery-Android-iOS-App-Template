@@ -1,0 +1,1948 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title_inner d-flex">
+                <span>{{'my_products' | translate}}</span>
+                <ion-icon class="zmdi zmdi-search end ion-text-end"></ion-icon>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" scrollable>
+        <ion-segment-button mode="ios" value="0">
+            <ion-label>Vegetables</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="1">
+            <ion-label>Fruits</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="2">
+            <ion-label>Herbs</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="3">
+            <ion-label>Dairy</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="4">
+            <ion-label>Vegetables</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="5">
+            <ion-label>Fruits</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="6">
+            <ion-label>Herbs</ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" value="7">
+            <ion-label>Dairy</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+</ion-header>
+
+<ion-content>
+    <div class="tab_content">
+        <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+
+
+            <ion-slide>
+                <ion-list lines="none">
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Potatoes.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Potatoes</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/lady_finger.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Lady Finger</h3>
+                                <h4 (click)="edit_product()">$ 3.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock  end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/tomato.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Tomattoes</h3>
+                                <h4 (click)="edit_product()">$ 2.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box  end">
+                                        <span>{{'out_of_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/Cauliflower .png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Cauliflower</h3>
+                                <h4 (click)="edit_product()">$ 4.50</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                    <ion-item class="animate__animated animate__fadeInUp">
+                        <div class="item_inner d-flex">
+                            <div class="img_box" (click)="edit_product()">
+                                <img src="assets/images/onion.png">
+                            </div>
+                            <div class="text_box">
+                                <h3 (click)="edit_product()">Fresh Red Onions</h3>
+                                <h4 (click)="edit_product()">$ 3.00</h4>
+                                <div class="buttons d-flex">
+                                    <h5 (click)="edit_product()">1 kg
+                                        <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                                    </h5>
+                                    <div class="toggle_box in_stock end">
+                                        <span>{{'in_stock' | translate}}</span>&nbsp;&nbsp;
+                                        <ion-toggle checked mode="ios"></ion-toggle>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+                </ion-list>
+            </ion-slide>
+        </ion-slides>
+    </div>
+
+    <ion-fab class="animate__animated animate__zoomIn" vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="add_product()">
+            <span>+</span>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

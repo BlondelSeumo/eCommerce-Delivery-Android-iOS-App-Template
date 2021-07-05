@@ -1,0 +1,118 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'confirm_order' | translate}}</ion-title>
+    </ion-toolbar>
+    <div class="shop_name">
+        <h2>Silver Leaf Vegetables</h2>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list lines="none">
+        <div class="item_list animate__animated animate__fadeInUp">
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="text_box">
+                        <h3>Fresh Red Onions</h3>
+                        <div class="buttons d-flex">
+                            <h5 (click)="variation_selection()">1 kg
+                                <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                            </h5>
+                            <p class="end">
+                                <span>-</span>
+                                <strong>1</strong>
+                                <span>+</span>
+                            </p>
+                            &nbsp; &nbsp;
+                            <h4 class="ion-text-end">$ 3.00</h4>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="text_box">
+                        <h3>Fresh Cauliflower</h3>
+                        <div class="buttons d-flex">
+                            <h5 (click)="variation_selection()">1 kg
+                                <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                            </h5>
+                            <p class="end">
+                                <span>-</span>
+                                <strong>1</strong>
+                                <span>+</span>
+                            </p>
+                            &nbsp; &nbsp;
+                            <h4 class="ion-text-end">$ 4.50</h4>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <div class="text_box">
+                        <h3>Fresh Red Tomattoes</h3>
+                        <div class="buttons d-flex">
+                            <h5 (click)="variation_selection()">1 kg
+                                <ion-icon class="zmdi zmdi-chevron-down ion-text-end"></ion-icon>
+                            </h5>
+                            <p class="end">
+                                <span>-</span>
+                                <strong>1</strong>
+                                <span>+</span>
+                            </p>
+                            &nbsp; &nbsp;
+                            <h4 class="ion-text-end">$ 2.50</h4>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="form animate__animated animate__fadeInUp">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start"><img src="assets/images/ic_instruction.png"></div>
+                    <div class="input_box">
+                        <ion-input mode="md" type="name" placeholder="{{'any_instruction' | translate}}"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="payment_info animate__animated animate__fadeInUp">
+            <h1>{{'payment_info' | translate}}</h1>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h3 class="d-flex">{{'sub_total' | translate}} <span class="end">$ 10.00</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h3 class="d-flex">{{'service_fee' | translate}} <span class="end">$ 1.50</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item_inner">
+                    <h2 class="d-flex">{{'amount_to_pay' | translate}} <span class="end">$ 11.50</span></h2>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="delivery_address">
+        <h2 class="d-flex">
+            <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+            {{'deliver_to' | translate}}&nbsp;
+            <span class="ion-text-uppercase">Home</span>
+<!--            <span class="end">{{'change' | translate}}</span>-->
+        </h2>
+        <p> Flat num, 114, Frist Floor, Central Residency 1024, Central Residency Hemilton Park, New York, USA</p>
+    </div>
+    <ion-button size="large" expand="full" class="btn" (click)="payment()">{{'pay' | translate}} $ 11.50</ion-button>
+</ion-footer>

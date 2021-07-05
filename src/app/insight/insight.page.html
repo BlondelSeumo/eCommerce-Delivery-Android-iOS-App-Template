@@ -1,0 +1,255 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="d-flex title_inner">
+                {{'insight' | translate}}
+                <div class="form end">
+                    <ion-item lines="none">
+                        <div class="item_inner d-flex">
+                            <ion-select mode="ios" interface="popover" [(ngModel)]="time">
+                                <ion-select-option value="1">{{'today' | translate}}</ion-select-option>
+                                <ion-select-option value="2">{{'last_week' | translate}}</ion-select-option>
+                                <ion-select-option value="3">{{'last_month' | translate}}</ion-select-option>
+                                <ion-select-option value="4"> {{'last_years' | translate}}</ion-select-option>
+                            </ion-select>
+                            <ion-icon class="zmdi zmdi-caret-down ion-text-end"></ion-icon>
+                        </div>
+                    </ion-item>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-card class="animate__animated animate__fadeInUp tab">
+        <ion-row>
+            <ion-col size="4" class="ion-text-center">
+                <h2>64</h2>
+                <p>{{'orders' | translate}}</p>
+            </ion-col>
+            <ion-col size="4" class="ion-text-center">
+                <h2>68 km</h2>
+                <p>{{'ride' | translate}}</p>
+            </ion-col>
+            <ion-col size="4" class="ion-text-center">
+                <h2>$ 302.50</h2>
+                <p>{{'earnings' | translate}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+
+    <ion-card class="animate__animated animate__fadeInUp">
+        <div class="card_containt">
+            <h1>{{'earnings' | translate}}</h1>
+            <div class="graph_container d-flex">
+                <div class="text_container">
+                    <p class="ion-text-end"><span>250</span></p>
+                    <p class="ion-text-end"><span>200</span></p>
+                    <p class="ion-text-end"><span>150</span></p>
+                    <p class="ion-text-end"><span>100</span></p>
+                    <p class="ion-text-end"><span>50</span></p>
+                    <p class="ion-text-end"><span>0</span></p>
+                </div>
+                <div class="graph end">
+                    <div class="bar_box">
+                        <h4>10:00</h4>
+                        <div class="bar" style="height:100%;">
+                            <h5>$ 222.50</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>11:00</h4>
+                        <div class="bar" style="height:71%;">
+                            <h5>$ 152.50</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>12:00</h4>
+                        <div class="bar" style="height:87%;">
+                            <h5>$ 201.50</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>13:00</h4>
+                        <div class="bar" style="height:79%;">
+                            <h5>$ 175.50</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>14:00</h4>
+                        <div class="bar" style="height:49%;">
+                            <h5>$ 140.50</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>15:00</h4>
+
+                        <div class="bar" style="height:0%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>17:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>18:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>19:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>20:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>21:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>22:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>23:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>24:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h3 class="ion-text-center">{{'view_all_transactions' | translate}}</h3>
+        </div>
+    </ion-card>
+
+
+    <ion-card class="animate__animated animate__fadeInUp">
+        <div class="card_containt">
+            <h1>{{'orders' | translate}}</h1>
+            <div class="graph_container d-flex">
+                <div class="text_container">
+                    <p class="ion-text-end"><span>10</span></p>
+                    <p class="ion-text-end"><span>8</span></p>
+                    <p class="ion-text-end"><span>6</span></p>
+                    <p class="ion-text-end"><span>4</span></p>
+                    <p class="ion-text-end"><span>2</span></p>
+                    <p class="ion-text-end"><span>0</span></p>
+                </div>
+                <div class="graph end">
+                    <div class="bar_box">
+                        <h4>10:00</h4>
+                        <div class="bar" style="height:70%;">
+                            <h5>9</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>11:00</h4>
+                        <div class="bar" style="height:71%;">
+                            <h5>8</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>12:00</h4>
+                        <div class="bar" style="height:100%;">
+                            <h5>10</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>13:00</h4>
+                        <div class="bar" style="height:79%;">
+                            <h5>7</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>14:00</h4>
+                        <div class="bar" style="height:49%;">
+                            <h5>5</h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>15:00</h4>
+
+                        <div class="bar" style="height:0%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>17:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>18:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>19:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>20:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>21:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>22:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>23:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+                    <div class="bar_box">
+                        <h4>24:00</h4>
+                        <div class="bar" style="height:05%;">
+                            <h5></h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h3 class="ion-text-center">{{'view_all_orders' | translate}}</h3>
+        </div>
+    </ion-card>
+</ion-content>

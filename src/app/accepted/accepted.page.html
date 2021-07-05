@@ -1,0 +1,144 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="d-flex " [ngClass]="fabAction ? 'active' : ''">
+                <span>{{'new_delivery_task' | translate}}</span>
+
+                <div class="order_info_button end" (click)="toggleFab()">
+                    <span class="info">
+                        <ion-icon class="zmdi zmdi-shopping-basket ion-text-start"></ion-icon>
+                        {{'order_info' | translate}}
+                    </span>
+                    <span class="cloes">
+                        <ion-icon class="zmdi zmdi-close ion-text-start"></ion-icon>
+                        {{'cloes' | translate}}
+                    </span>
+                </div>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="order_info" [ngClass]="fabAction ? 'active' : ''">
+        <div class="item_container">
+            <div class="item">
+                <h2>Fresh Red Onions</h2>
+                <p class="d-flex">
+                    <span class="item_about">1 kg x 1</span>
+                    <span class="end">$ 3.00</span>
+                </p>
+            </div>
+            <div class="item">
+                <h2>Fresh Cauliflower</h2>
+                <p class="d-flex">
+                    <span class="item_about">1 kg x 1</span>
+                    <span class="end">$ 4.50</span>
+                </p>
+            </div>
+            <div class="item">
+                <h2>Fresh Red Tomattoes</h2>
+                <p class="d-flex">
+                    <span class="item_about">1 kg x 1</span>
+                    <span class="end">$ 2.50</span>
+                </p>
+            </div>
+            <div class="item">
+                <h2>Fresh Red Onions</h2>
+                <p class="d-flex">
+                    <span class="item_about">1 kg x 1</span>
+                    <span class="end">$ 3.00</span>
+                </p>
+            </div>
+            <div class="item">
+                <h2>Fresh Cauliflower</h2>
+                <p class="d-flex">
+                    <span class="item_about">1 kg x 1</span>
+                    <span class="end">$ 4.50</span>
+                </p>
+            </div>
+            <div class="item">
+                <h2>Fresh Red Tomattoes</h2>
+                <p class="d-flex">
+                    <span class="item_about">1 kg x 1</span>
+                    <span class="end">$ 2.50</span>
+                </p>
+            </div>
+        </div>
+        <div class="instruction d-flex">
+            <div class="img_box ion-text-start">
+                <img src="assets/images/ic_instruction.png">
+            </div>
+            <p>Keep Tomatoes in saperate bag please.</p>
+        </div>
+
+        <div class="payment_detail">
+            <h2 class="d-flex">
+                Cash on Delivery
+                <span class="end ion-text-end">$ 11.50</span>
+            </h2>
+        </div>
+    </div>
+
+    <div class="map center_img">
+        <img src="assets/images/map.png" class="crop_img">
+        <div class="delivery_location" style="top: 26%; right: 76%; transform: rotate(-192deg);">
+            <img src="assets/images/deliveryman.png">
+        </div>
+        <ion-icon class="zmdi zmdi-pin ion-text-center animate__animated animate__zoomIn" style="top: 39%; right: 79%;"></ion-icon>
+        <ion-icon class="zmdi zmdi-navigation ion-text-center animate__animated animate__zoomIn" style="top: 40%; right: 30%;"></ion-icon>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-card>
+        <div class="card_header d-flex">
+            <div class="img_box">
+                <img src="assets/images/Vegetables_Fruitsact.png">
+            </div>
+            <div class="text_box">
+                <h2> Vegetables & Fruits</h2>
+                <h3>2.5 km <span>(3 min)</span></h3>
+            </div>
+            <div class="direction end">
+                <ion-icon class="zmdi zmdi-navigation ion-text-start"></ion-icon>
+                {{'direction' | translate}}
+            </div>
+        </div>
+        <div class="delivery_details">
+            <div class="delivery_address animate__animated animate__fadeInUp d-flex">
+                <ion-icon class="zmdi zmdi-pin ion-text-center"></ion-icon>
+                <div class="text_box">
+                    <h2>Silver Leaf Vegetables</h2>
+                    <p>1024, Hemioton Street, Union Market, USA</p>
+                </div>
+
+
+                <div class="iocn_box end d-flex">
+                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-end" (click)="chat()"></ion-icon>
+                    <ion-icon class="zmdi zmdi-phone ion-text-end end"></ion-icon>
+                </div>
+            </div>
+            <div class="dotted">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="delivery_address animate__animated animate__fadeInUp d-flex">
+                <ion-icon class="zmdi zmdi-navigation ion-text-center"></ion-icon>
+                <div class="text_box">
+                    <h2>Sam Smith</h2>
+                    <p>D-32, Deniel Street, Centerl Residency</p>
+                </div>
+
+<!--
+                <div class="iocn_box end d-flex">
+                    <ion-icon class="zmdi zmdi-phone ion-text-end end"></ion-icon>
+                </div>
+-->
+            </div>
+        </div>
+    </ion-card>
+    <ion-button size="large" shape="full" class="btn animate__animated animate__fadeInUp" (click)="on_the_way()">{{'mark_as_picked' | translate}}</ion-button>
+</ion-footer>
+ 

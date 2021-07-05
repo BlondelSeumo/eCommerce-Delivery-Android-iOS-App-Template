@@ -1,0 +1,78 @@
+ion-tabs {
+    ion-tab-bar {
+        --background: var(--white);
+        --ripple-color: var(--transparent) !important;
+        box-shadow: 0 39px 49px 16px rgba(0, 0, 0, 0.37) !important;
+        --animate-duration: .4s !important;
+
+        ion-tab-button {
+            --ripple-color: var(--transparent) !important;
+            position: relative;
+            overflow: hidden;
+            --padding-start: 10px;
+            --padding-end: 10px;
+
+            .tab-button {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 20px);
+                background: var(--white);
+                backface-visibility: hidden;
+                transition: 0.5s;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+
+                .tab-button-inner {
+                    display: flex;
+                    align-items: center;
+                    margin: auto;
+                }
+
+                h2 {
+                    margin: 0;
+                    color: var(--text-black);
+                    font-size: .75rem;
+                    font-weight: 600;
+                }
+
+                .icon_box {
+                    width: 25px;
+                    margin: auto;
+
+                    img {
+                        &.dark-them-icon {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.selected {
+                    background: var(--bg-color);
+                    backface-visibility: hidden;
+                    bottom: -1000%;
+
+                    .icon_box {
+                        margin-right: 8px;
+                    }
+
+                }
+            }
+
+            &.tab-selected {
+                .tab-button {
+                    top: -1000%;
+
+                    &.selected {
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

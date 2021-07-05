@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <ion-icon class="zmdi zmdi-chevron-down" (click)="dismiss()"></ion-icon>
+        </ion-title>
+    </ion-toolbar>
+    <div class="profile_info d-flex">
+        <div class="img_box center_img animate__animated animate__zoomIn">
+            <img src="assets/images/img_profile.png" class="crop_img">
+        </div>
+        <div class="text_box">
+            <h2 class="animate__animated animate__fadeInUp">George Anderson</h2>
+            <h3 class="animate__animated animate__fadeInUp">{{'delivery_partner' | translate}}</h3>
+        </div>
+        <div class="icon_box end">
+            <ion-icon class="zmdi zmdi-phone ion-text-end"></ion-icon>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content  fullscreen>
+    <div class="chat_container d-flex">
+        <div class="chat_box d-flex animate__animated animate__zoomIn send">
+            <div class="chat">
+                <h2>Hey there? <br> How much time?</h2>
+                <p>11:58 am</p>
+            </div>
+        </div>
+
+        <div class="chat_box d-flex animate__animated animate__zoomIn received">
+            <div class="chat">
+                <h2>On my way ma'm <br>Will reach in 10 mins.</h2>
+                <p>11:59 am</p>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="form">
+        <ion-list lines="none d-flex">
+            <ion-item lines="none">
+                <ion-textarea rows="1"  auto-grow="true" type="text" placeholder="{{'type_your_meassage' | translate}}"></ion-textarea>
+            </ion-item>
+            <div class="send_btn end">
+                <ion-icon class="zmdi zmdi-mail-send"></ion-icon>
+            </div>
+        </ion-list>
+    </div>
+</ion-footer>

@@ -1,0 +1,152 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+    <ion-item lines="none">
+        <div class="item_inner">
+            <div class="item_info d-flex animate__animated animate__fadeInUp">
+                <div class="itme_img">
+                    <img src="assets/images/Vegetables_Fruitsact.png">
+                </div>
+                <div class="item_details">
+                    <h3 class="d-flex">
+                        Vegetables & Fruits
+                        <span class="end order_status">
+                            {{'pickup_arranged' | translate}}
+                        </span>
+                    </h3>
+                    <h4 class="d-flex">20 Jun, 11:35 am <span class="end">$ 11.50 | COD</span></h4>
+                </div>
+            </div>
+            <div class="address_info animate__animated animate__fadeInUp">
+                <div class="from_to d-flex animate__animated animate__fadeInUp">
+                    <div class="icon_box d-flex">
+                        <ion-icon class="zmdi zmdi-pin"></ion-icon>
+                    </div>
+                    <h5>Silver Leaf Vegetables <span>(Union Market)</span></h5>
+                </div>
+                <div class="dotted_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="from_to d-flex animate__animated animate__fadeInUp">
+                    <div class="icon_box d-flex">
+                        <ion-icon class="zmdi zmdi-navigation"></ion-icon>
+                    </div>
+                    <h5>Home <span>(Central Residency)</span></h5>
+                </div>
+            </div>
+        </div>
+    </ion-item>
+</ion-header>
+
+<ion-content class="bg_color" fullscreeen>
+    <div class="map center_img">
+        <img src="assets/images/map.png" class="crop_img">
+        <div class="delivery_location" style="top: 4%; right: 77%; transform: rotate(-164deg);">
+            <img src="assets/images/deliveryman.png">
+        </div>
+        <ion-icon class="zmdi zmdi-pin ion-text-center animate__animated animate__zoomIn" style="top: 20%; right: 79%;"></ion-icon>
+        <ion-icon class="zmdi zmdi-navigation ion-text-center animate__animated animate__zoomIn" style="top: 36%; right: 35%;"></ion-icon>
+    </div>
+
+
+    <ion-list class="animate__animated animate__fadeInUp" lines="none" [ngClass]="fabAction ? 'active' : ''">
+        <ion-item class="profile_info">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/img_profile.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h2>George Anderson</h2>
+                    <h3>{{'delivery_partner' | translate}}</h3>
+                </div>
+                <div class="icon_box end">
+                    <ion-icon class="zmdi zmdi-comment-alt-text ion-text-start" (click)="chat()"></ion-icon>
+                    <ion-icon class="zmdi zmdi-phone ion-text-end"></ion-icon>
+                </div>
+            </div>
+        </ion-item>
+
+        <div class="list-inner">
+            <div class="item_list">
+                <ion-item>
+                    <div class="item_inner">
+                        <div class="text_box">
+                            <h3>Fresh Red Onions</h3>
+                            <div class="buttons d-flex">
+                                <h5>1 kg x 1</h5>
+                                <h4 class="ion-text-end end">$ 3.00</h4>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="item_inner">
+                        <div class="text_box">
+                            <h3>Fresh Cauliflower</h3>
+                            <div class="buttons d-flex">
+                                <h5>1 kg x 1</h5>
+                                <h4 class="ion-text-end end">$ 4.50</h4>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="item_inner">
+                        <div class="text_box">
+                            <h3>Fresh Red Tomattoes</h3>
+                            <div class="buttons d-flex">
+                                <h5>1 kg x 1</h5>
+                                <h4 class="ion-text-end end">$ 2.50</h4>
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+
+            <div class="form">
+                <ion-item lines="none">
+                    <div class="item_inner d-flex">
+                        <div class="icon_box ion-text-start"><img src="assets/images/ic_instruction.png"></div>
+                        <div class="input_box">
+                            <ion-input mode="md" type="name" readonly="boolean" value="Keep tomatoes in saperate bag please."></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+            </div>
+
+            <div class="payment_info">
+                <h1>{{'payment_info' | translate}}</h1>
+                <ion-item>
+                    <div class="item_inner">
+                        <h3 class="d-flex">{{'sub_total' | translate}} <span class="end">$ 10.00</span></h3>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="item_inner">
+                        <h3 class="d-flex">{{'service_fee' | translate}} <span class="end">$ 1.50</span></h3>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="item_inner">
+                        <h2 class="d-flex">{{'amount_to_pay' | translate}} <span class="end">$ 11.50</span></h2>
+                    </div>
+                </ion-item>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border d-flex animate__animated animate__fadeInUp" [ngClass]="fabAction ? 'active' : ''">
+    <h2>3 {{'items' | translate}}</h2>
+    <h6 class="end d-flex" (click)="toggleFab()">
+        <span>{{'view_order' | translate}}</span>
+        <span>{{'cloes' | translate}}</span>
+        <ion-icon class="zmdi zmdi-chevron-down ion-text-center end"></ion-icon>
+    </h6>
+</ion-footer>

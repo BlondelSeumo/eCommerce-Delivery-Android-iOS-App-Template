@@ -1,0 +1,27 @@
+<ion-content>
+    <div class="cloes_btn ion-text-end">
+        <ion-icon name="close-outline" (click)="dismiss()"></ion-icon>
+    </div>
+
+    <ion-card>
+        <div class="img_box">
+            <img src="https://opuslabs.nyc3.digitaloceanspaces.com/AAFixItems/Other/popup_img_head.png">
+        </div>
+
+        <div class="text_box">
+            <h2>Stay in touch.</h2>
+            <p>Stay connected for Future <br>updates and new products.</p>
+        </div>
+        <ion-list lines="none">
+
+            <ion-item lines="none">
+                <ion-input type="email" placeholder="Enter your email address" [(ngModel)]="email_Id"></ion-input>
+            </ion-item>
+
+            <ion-button size="large" shape="block" class="btn" (click)="onSubscribe()">
+                Subscribe Now
+            </ion-button>
+
+        </ion-list>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,981 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Vegetable & Fruits
+        </ion-title>
+    </ion-toolbar>
+    <div class="search_box animate__animated animate__zoomIn">
+        <ion-icon class="zmdi zmdi-search ion-text-start"></ion-icon>
+        <ion-searchbar class="ion-no-padding" searchIcon="hide" placeholder="{{'search_item_or_store' | translate}}"></ion-searchbar>
+    </div>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="none">
+        <h2>28 {{'stores_found' | translate}}</h2>
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+        
+         <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        6.4 km <span>|</span> Union Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.2
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Good'day Veggies</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        8.9 km <span>|</span> City Garden
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        22 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.8
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>24*7 Vegetables & Fruits</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        5.0 km <span>|</span> Wipro Market
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        12 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        3.5
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>Silver Leaf Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        11.5 km <span>|</span> Ring Road
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        4.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item (click)="items()" class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/store4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3>City Central Vegetables</h3>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        9.4 km <span>|</span> Liverpool Line
+                    </h4>
+
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-time ion-text-start"></ion-icon>
+                        30 MINS
+                    </h4>
+                    <h5 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star ion-text-start"></ion-icon>
+                        5.0
+                    </h5>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'register' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start"><img src="assets/images/ic_name.png"></div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"full_name" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="" value="Samantha Smith"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start"><img src="assets/images/ic_mail.png"></div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"email_address" | translate}}</ion-label>
+                        <ion-input mode="md" type="email" placeholder="" value="samanthasmithn@mail.com"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start"><img src="assets/images/ic_phone.png"></div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"phone_number" | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="" value="+1 987 654 3210"></ion-input>
+                    </div>
+                </div>
+            </ion-item> 
+
+            <p class="d-flex animate__animated animate__fadeInUp"><span class="end">{{"we_ll_send_verification_code_on_adove_given_number" | translate}}</span></p>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <ion-button size="large" expand="full" class="btn" (click)="verification()">{{'continue' | translate}}</ion-button>
+</ion-footer>

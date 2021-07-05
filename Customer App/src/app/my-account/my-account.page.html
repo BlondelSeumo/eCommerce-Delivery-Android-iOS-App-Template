@@ -1,0 +1,97 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{'my_account' | translate}}</ion-title>
+    </ion-toolbar>
+    <div class="profile_info">
+        <h2 class="animate__animated animate__fadeInUp">Samantha Smith</h2>
+        <p class="animate__animated animate__fadeInUp">+1 987 654 3210</p>
+        <p class="animate__animated animate__fadeInUp">samanthasmith@mail.com</p>
+    </div>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <div class="buy_this_app end" (click)="buyappalert()" *ngIf="config.demoMode">
+        <h2>
+            <!--                        <ion-icon class="zmdi zmdi-shopping-cart"></ion-icon>-->
+            {{"buy_this_app" | translate}}
+        </h2>
+    </div>
+
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="saved_addresses()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_addressact.png">
+                </div>
+                <h2>{{'saved_address' | translate}}</h2>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="wallet()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_wallet.png">
+                </div>
+                <h2>{{'wallet' | translate}}</h2>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="terms_conditions()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_tncact.png">
+                </div>
+                <h2>{{'terms_conditions' | translate}}</h2>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="support()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_supportact.png">
+                </div>
+                <h2>{{'support' | translate}}</h2>
+            </div>
+        </ion-item>
+
+        <!--
+        <ion-item class="animate__animated animate__fadeInUp" (click)="about_us()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_aboutact.png">
+                </div>
+                <h2>{{'about_us' | translate}}</h2>
+            </div>
+        </ion-item>
+-->
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="settings()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_setting.png">
+                </div>
+                <h2>{{'settings' | translate}}</h2>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp" (click)="phone_number()">
+            <div class="item_inner d-flex">
+                <div class="icon_box ion-text-start">
+                    <img src="assets/images/ic_menu_logoutact.png">
+                </div>
+                <h2>{{'logout' | translate}}</h2>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <div class="developed_by d-flex" (click)="developed_by()" *ngIf="config.demoMode">
+        <h2>{{"developed_by" | translate}}</h2>
+        <div class="img_box end">
+            <img src="assets/images/opus.png" class="light-theme-logo">
+            <img src="assets/images/opus_logo_light.png" class="dark-theme-logo">
+        </div>
+    </div>
+</ion-footer>

@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+    <div class="form">
+        <ion-list lines="none">
+            <h1 class="animate__animated animate__fadeInUp">{{'hey' | translate}} Samantha,</h1>
+            <h2 class="animate__animated animate__fadeInUp">
+                {{'you_are_almost_in' | translate}}.
+                <br>
+                {{'please_provide_you_phone_number_for_verification_purpose' | translate}}.
+            </h2>
+            <ion-item class="animate__animated animate__fadeInUp" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start"><img src="assets/images/ic_phone.png"></div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"phone_number" | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="" value="+1 987 654 3210"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+            <p class="d-flex animate__animated animate__fadeInUp"><span class="end">{{"we_ll_send_verification_code_on_adove_given_number" | translate}}</span></p>
+        </ion-list>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp" style="--animate-duration: .4s;">
+    <ion-button size="large" expand="full" class="btn" (click)="verification()">{{'continue' | translate}}</ion-button>
+</ion-footer>
